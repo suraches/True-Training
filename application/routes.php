@@ -32,10 +32,19 @@
 |
 */
 
-Route::get('/', function()
+/**
+ * Detect all controller folder including sub-folder.
+ */
+Route::controller(Controller::detect());
+
+//Route::controller('home.condo.sub.sub');
+//Route::controller('home');
+
+
+/*Route::get('/', function()
 {
 	return View::make('home.index');
-});
+});*/
 
 /**
  * Custom filter.

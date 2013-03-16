@@ -1,6 +1,13 @@
-<?php
+<?php /* path: /controllers/base.php */
 
 class Base_Controller extends Controller {
+
+	/**
+	 * RESTful enabled.
+	 *
+	 * @var boolean
+	 */
+	public $restful = true;
 
 	/**
 	 * Catch-all method for requests that can't be matched.

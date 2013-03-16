@@ -30,9 +30,15 @@ class Home_Controller extends Base_Controller {
 	|
 	*/
 
-	public function action_index()
+	public function get_index($name = null, $option = null)
 	{
-		return View::make('home.index');
+		return $name . ' and ' . $option;
 	}
+
+	// Request with any request methods.
+	/*public function action_index()
+	{
+		//return View::make('home.index');
+	}*/
 
 }
