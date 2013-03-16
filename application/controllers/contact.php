@@ -14,7 +14,7 @@ class Contact_Controller extends Base_Controller {
 			'detail' => 'Detail of Contact'
 		);
 
-		//Asset::container('footer')->add('contact', 'js/contact/execute.js');
+		Asset::container('footer')->add('contact', 'js/contact/execute.js');
 
 		$this->layout->nest('content', 'contact.index', $view);
 		//return View::make('contact.index', $view);

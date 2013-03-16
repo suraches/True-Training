@@ -39,4 +39,6 @@ return array(
 
 	'harlemshake' => array('auto' => true),
 
+	'theme' => array('auto' => true)
+
 );
