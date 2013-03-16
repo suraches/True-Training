@@ -37,6 +37,72 @@ Route::get('/', function()
 	return View::make('home.index');
 });
 
+/**
+ * Custom filter.
+ */
+Route::filter('hello', function($name = '')
+{
+	//echo 'Hello' . $name;
+});
+
+/**
+ * Running: /user/?
+ */
+Route::get('demo1/(:any)', array('before' => 'hello:Tee', 'do' => function()
+{
+	return 'Test';
+}));
+
+/**
+ * Create route alias.
+ */
+Route::get('demo2', array('as' => 'd2', 'do' => function()
+{
+	return URL::to_route('d2');
+}));
+
+/**
+ * Route pattern.
+ */
+Route::filter('pattern: admin/*', 'checking:moderator');
+Route::filter('checking', function($who)
+{
+	if ($who != 'admin')
+	{
+		return 'You don\'t have perrmision to access';
+	}
+});
+Route::get('admin/dashboard', function()
+{
+	return 'Admin Dashboard';
+});
+Route::get('admin/users', function()
+{
+	return 'Admin Manage Users';
+});
+
+/**
+ * Route group.
+ */
+Route::filter('moderator', function()
+{
+	echo 'Moderator Check';
+});
+
+Route::group(array('before' => 'moderator'), function()
+{
+	Route::get('a', function()
+	{
+		return 'A';
+	});
+
+	Route::get('b', function()
+	{
+		return 'B';
+	});
+});
+
+
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers

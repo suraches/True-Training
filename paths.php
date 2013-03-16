@@ -21,6 +21,9 @@
 |
 */
 
+#Git Repo.
+//https://github.com/teepluss/True-Training
+
 $environments = array(
 
 	'local' => array('http://localhost*', '*.dev'),
