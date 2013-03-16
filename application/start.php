@@ -174,12 +174,12 @@ if ( ! Request::cli() and Config::get('session.driver') !== '')
 
 /*
 |--------------------------------------------------------------------------
-| Our application dependencies
+| True Music Dependencies.
 |--------------------------------------------------------------------------
 |
-| This file include all application logic dependecies. This contains
-| with theming, macro, extending and the others.
+| Require code below is not a part of Laravel, The code use
+| for True Music Only!
 |
 */
 
-//require path('app').'decorations/start.php';
+require path('app').'bootstrap/composers.php';

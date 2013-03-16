@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title></title>
-		<meta http-equiv="content-type" type="text/html; charset=UTF-8">
-	</head>
-	<body>
 		<form method="post" action="<?php echo URL::to('contact'); ?>">
 			<p>
 				<label>Name</label>
@@ -21,5 +14,3 @@
 				<input type="submit" value="Send">
 			</p>
 		</form>
-	</body>
-</html>

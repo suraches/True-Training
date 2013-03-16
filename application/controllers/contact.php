@@ -2,6 +2,8 @@
 
 class Contact_Controller extends Base_Controller {
 
+	public $layout = 'templates.default';
+
 	public function get_index()
 	{
 		$name = 'Tee';
@@ -12,7 +14,10 @@ class Contact_Controller extends Base_Controller {
 			'detail' => 'Detail of Contact'
 		);
 
-		return View::make('contact.index', $view);
+		//Asset::container('footer')->add('contact', 'js/contact/execute.js');
+
+		$this->layout->nest('content', 'contact.index', $view);
+		//return View::make('contact.index', $view);
 	}
 
 	public function post_index()
