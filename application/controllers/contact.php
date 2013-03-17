@@ -14,7 +14,10 @@ class Contact_Controller extends Base_Controller {
 			'detail' => 'Detail of Contact'
 		);
 
-		Asset::container('footer')->add('contact', 'js/contact/execute.js');
+		//Asset::container('footer')->add('contact', 'js/contact/execute.js');
+
+		//Asset::add('jquery-ui', 'jquery-ui.min.js', array('jquery', 'underscorejs'));
+		//Asset::add('jquery', 'jquery.min.js');
 
 		$this->layout->nest('content', 'contact.index', $view);
 		//return View::make('contact.index', $view);
