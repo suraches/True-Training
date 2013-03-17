@@ -188,3 +188,8 @@ require path('app').'bootstrap/composers.php';
  * Macro form.
  */
 require path('app').'bootstrap/forms.php';
+
+/**
+ * Macro HTML.
+ */
+require path('app').'bootstrap/htmls.php';
