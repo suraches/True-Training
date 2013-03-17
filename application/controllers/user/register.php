@@ -15,6 +15,32 @@ class User_Register_Controller extends Base_Controller {
 
 	public function post_create()
 	{
+		$rules = array(
+			'username'   => 'required|alpha_dash',
+			'password'   => 'required|min:4|confirmed',
+			'first_name' => 'required',
+			'last_name'  => 'required',
+		);
+
+		$data = Input::all();
+
+		$messages = array(
+			//'username_required' => 'Please input username'
+		);
+
+		$validation = Validator::make($data, $rules, $messages);
+
+		if ($validation->fails())
+		{
+			$errors = $validation->errors;
+
+			//->with('content', $content);
+			//->with_content($content);
+
+			return Redirect::back()->with_input()->with_errors($errors);
+		}
+
+		// Save data to the database.
 
 	}
 
