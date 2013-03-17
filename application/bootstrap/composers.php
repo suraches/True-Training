@@ -3,6 +3,11 @@
 Section::inject('title', 'Domain.com: ');
 
 /**
+ * Register template name.
+ */
+View::name('templates.default', 'default');
+
+/**
  * Template: default composer.
  */
 View::composer('templates.default', function($view)
