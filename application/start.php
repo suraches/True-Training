@@ -183,3 +183,8 @@ if ( ! Request::cli() and Config::get('session.driver') !== '')
 */
 
 require path('app').'bootstrap/composers.php';
+
+/**
+ * Macro form.
+ */
+require path('app').'bootstrap/forms.php';

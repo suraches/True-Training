@@ -11,7 +11,6 @@
 		@if ($errors->has('username'))
 		{{ $errors->first('username', '<span class="error">:message</span>') }}
 		@endif
-
 	</p>
 	<p>
 		{{ Form::label('password', 'Password') }}
@@ -40,6 +39,10 @@
 		@if ($errors->has('last_name'))
 		{{ $errors->first('last_name', '<span class="error">:message</span>') }}
 		@endif
+	</p>
+	<p>
+		{{ Form::label('addresses', 'Addresses') }}
+		<?php echo Form::text_append('addresses', null); ?>
 	</p>
 	<p>
 		{{ Form::submit('Register') }}
